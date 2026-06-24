@@ -1,0 +1,120 @@
+<%- include('encabezado') %>
+
+<!-- LOGIN -->
+<div class="col-md-4">
+  <div class="card p-4 shadow-lg">
+    <h3 class="text-center mb-4">Control de reparacion de Ordenandores</h3>
+
+    <form>
+      <input
+        type="text"
+        class="form-control mb-3"
+        placeholder="Nombre usuario"
+        name="correo"
+      />
+      <input
+        type="password"
+        class="form-control mb-3"
+        placeholder="Contraseña"
+        name="contraseña"
+      />
+
+      <button class="btn btn-primary w-100">Entrar</button>
+    </form>
+
+    <div class="text-center mt-3">
+      <small><a href="/index">¿No tienes cuenta?</a></small
+      ><br />
+      <button
+        class="btn btn-outline-light mt-2"
+        data-bs-toggle="modal"
+        data-bs-target="#registroModal"
+      >
+        Crear cuenta
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL REGISTRO -->
+<div class="modal fade" id="registroModal">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content p-4">
+      <div class="modal-header border-0">
+        <h4 class="modal-title w-100 text-center">📝 Formulario de registro</h4>
+        <button
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+
+      <div class="modal-body">
+        <form action="/registro" method="post">
+          <div class="row g-4">
+            <!-- DATOS PERSONALES -->
+            <div class="col-12">
+              <h5>Datos personales</h5>
+            </div>
+
+            <div class="col-md-4">
+              <label>Nombre</label>
+              <input type="text" class="form-control" name="nombre" />
+            </div>
+
+            <div class="col-md-4">
+              <label>Apellido</label>
+              <input type="text" class="form-control" name="apellido" />
+            </div>
+
+            <div class="col-md-4">
+              <label>direccion</label>
+              <input type="text" class="form-control" name="direccion" />
+            </div>
+
+            <div class="col-md-4">
+              <label>Telefono</label>
+              <input type="text" class="form-control" name="telefono" />
+            </div>
+            
+
+
+            <!-- USUARIO -->
+            <div class="col-12">
+              <h5>Datos de usuario</h5>
+            </div>
+
+            <div class="col-md-4">
+              <label>Nombre de usuario</label>
+              <input type="text" class="form-control" name="nomusu" />
+            </div>
+
+            <div class="col-md-4">
+              <label>Contraseña</label>
+              <input type="password" class="form-control" name="claveusu1" />
+            </div>
+
+            <div class="col-md-4">
+              <label>Contraseña</label>
+              <input type="password" class="form-control" name="claveusu2" />
+            </div>
+
+            
+           
+            <!-- EXTRA -->
+          </div>
+
+          <!-- BOTONES -->
+          <div class="mt-4 text-center">
+            <button type="submit" class="btn btn-primary px-5">
+              Registrase
+            </button>
+            <button type="reset" class="btn btn-secondary px-5">
+              Cancelar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('pie') %>

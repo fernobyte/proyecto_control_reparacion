@@ -1,0 +1,64 @@
+<%- include('encabezado') %> 
+<%- include('menu') %>
+
+<div class="container d-flex justify-content-center" style="min-height: calc(100vh - 80px); margin-top: 50px;">
+  <div class="w-100" style="max-width: 950px;">
+
+    <h3 class="mb-5 text-center">Formulario de Registro</h3>
+
+    <form>
+      <div class="row g-5"> <!-- g-5 para más espacio entre columnas y filas -->
+
+        <!-- ===== FILA 1 ===== -->
+        <div class="col-12 col-md-4">
+          <label for="nombre" class="form-label fw-semibold">Nombre</label>
+          <input type="text" class="form-control form-control-xl" id="nombre" placeholder="Ingrese nombre">
+        </div>
+        <div class="col-12 col-md-4">
+          <label for="apellido" class="form-label fw-semibold">Apellido</label>
+          <input type="text" class="form-control form-control-xl" id="apellido" placeholder="Ingrese apellido">
+        </div>
+        <div class="col-12 col-md-4">
+          <label for="email" class="form-label fw-semibold">Telefono 1</label>
+          <input type="text" class="form-control form-control-xl" id="email" placeholder="123-456-7890">
+        </div>
+
+        <!-- ===== FILA 2 ===== -->
+        <div class="col-12 col-md-4">
+          <label for="telefono" class="form-label fw-semibold">Teléfono 2</label>
+          <input type="text" class="form-control form-control-xl" id="telefono" placeholder="123-456-7890">
+        </div>
+        <div class="col-12 col-md-4">
+          <label for="usuario" class="form-label fw-semibold">Ubicacion</label>
+          <input type="text" class="form-control form-control-xl" id="usuario" placeholder="Barrio">
+        </div>
+        
+
+        <!-- ===== FILA 3 ===== -->
+        <div class="col-12 col-md-4">
+          <label for="rol" class="form-label fw-semibold">bosquejo</label>
+          <select class="form-select form-select-xl" id="rol">
+            <option selected>Seleccione </option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          
+          </select>
+        </div>
+        <div class="col-12 col-md-4">
+          <label for="fecha" class="form-label fw-semibold">Fecha a discursar</label>
+          <input type="date" class="form-control form-control-xl" id="fecha">
+        </div>
+        
+
+      </div>
+
+      <!-- ===== BOTONES ===== -->
+      <div class="mt-5 d-flex justify-content-center gap-3">
+        <button type="submit" class="btn btn-primary btn-lg px-5">Enviar</button>
+        <button type="reset" class="btn btn-secondary btn-lg px-5">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<%- include('pie') %>

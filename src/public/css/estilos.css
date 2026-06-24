@@ -1,0 +1,115 @@
+body {
+  overflow-x: hidden;
+  background: #f4f6f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== SIDEBAR ===== */
+#sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #343a40;
+  transition: transform 0.3s ease;
+  z-index: 1050; /* siempre encima del contenido en móviles */
+}
+
+/* Sidebar colapsado en móviles */
+#sidebar.collapsed {
+  transform: translateX(-260px);
+}
+
+/* Links del sidebar */
+#sidebar .nav-link {
+  color: white;
+}
+#sidebar .nav-link:hover {
+  background: #495057;
+}
+.submenu {
+  background: #3d444a;
+}
+.submenu a {
+  font-size: 14px;
+  padding-left: 30px;
+}
+
+/* ===== CONTENT ===== */
+.content {
+  margin-left: 250px; /* espacio para sidebar en desktop */
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  position: relative; 
+  z-index: 1; /* debajo del sidebar */
+}
+
+/* Cuando sidebar colapsa en móviles */
+body.sidebar-collapsed .content {
+  margin-left: 0;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+  background: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1020; /* encima de tarjetas, debajo del sidebar */
+}
+
+/* ===== TARJETAS Y TABLA ===== */
+.row > [class*="col-"] {
+  display: flex; /* asegura que la card ocupe todo el ancho de la columna */
+}
+
+.card {
+  width: 100%; /* full width de la columna */
+}
+
+/* Tabla responsive */
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* Para móviles: botón del sidebar */
+#sidebarToggle {
+  z-index: 1100; /* encima de todo */
+}
+
+/* Sidebar fijo y encima del contenido */
+#sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #343a40;
+  transition: transform 0.3s ease;
+  z-index: 1050;
+}
+
+/* Contenido con margen para desktop */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Móviles: sidebar colapsado */
+#sidebar.collapsed {
+  transform: translateX(-260px);
+}
+
+body.sidebar-collapsed .content {
+  margin-left: 0;
+}
+
+
+

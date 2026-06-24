@@ -1,0 +1,49 @@
+<!-- ===== SIDEBAR ===== -->
+<nav id="sidebar" class="bg-dark position-fixed vh-100 d-none d-md-block">
+  <div class="p-3">
+  <a href="/index" style="text-decoration: none;">  <h4 class="text-white">D.Publicos</h4></a>
+    <hr class="text-secondary" />
+
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a href="#" class="nav-link">Operaciones</a>
+      </li>
+
+      <!-- ===== MENU USUARIOS ===== -->
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#usuariosMenu">
+          Formularios ▼
+        </a>
+        <ul class="collapse list-unstyled submenu" id="usuariosMenu">
+          <li><a href="/" class="nav-link">registro de ordenadores</a></li>
+          <li><a href="#" class="nav-link">registro de empleados</a></li>
+          <li><a href="#" class="nav-link">registro de clientes</a></li>
+          <li><a href="/registro_invitacion" class="nav-link">asignacion de reparacion</a></li>
+          <li><a href="#" class="nav-link">registro de usuarios</a></li>
+
+        </ul>
+      </li>
+
+      <!-- ===== MENU PRODUCTOS ===== -->
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#productosMenu">
+          Listar ▼
+        </a>
+        <ul class="collapse list-unstyled submenu" id="productosMenu">
+          <li><a href="/lista_bosquejo" class="nav-link">Ordenadores a reparar</a></li>
+          <li><a href="/Lista_discursante" class="nav-link">Técnicos</a></li>
+          <li><a href="/lista_invitacion" class="nav-link">Reparaciones hechas</a></li>
+           <li><a href="#" class="nav-link">Usuarios</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a href="#" class="nav-link">Reportes</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">Configuración</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== BOTÓN PARA MÓVILES ===== -->
+<button class="btn btn-dark d-md-none m-2" id="sidebarToggle">
+  ☰
+</button>
